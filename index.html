@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gorilla Tag Help Bot</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+
+            background:
+                radial-gradient(
+                    ellipse at top,
+                    #376c3d 0%,
+                    #193d26 55%,
+                    #0b2115 100%
+                );
+
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 8px;
+            font-size: 30px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            margin-top: 0;
+            margin-bottom: 30px;
+            color: #c9e8cb;
+            font-size: 15px;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #709b75;
+            border-radius: 10px;
+            outline: none;
+
+            background: #10281b;
+            color: white;
+
+            font-size: 16px;
+        }
+
+        input:focus {
+            border-color: #a5e6a9;
+        }
+
+        input::placeholder {
+            color: #a8bbaa;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            margin-top: 14px;
+            padding: 15px;
+
+            border: none;
+            border-radius: 10px;
+
+            background: #74c878;
+            color: #102716;
+
+            font-size: 17px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #91df95;
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: wait;
+        }
+
+        #status {
+            min-height: 24px;
+            margin-top: 20px;
+            overflow-wrap: anywhere;
+            color: #e0f3e2;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Gorilla Tag Help Bot</h1>
+
+        <p class="subtitle">Only meant for the creator</p>
+
+        <form id="roomForm">
+
+            <input
+                id="roomCode"
+                type="text"
+                placeholder="Enter Gorilla Tag room code..."
+                autocomplete="off"
+                spellcheck="false"
+                required
+                aria-label="Gorilla Tag room code"
+            >
+
+            <button id="sendButton" type="submit">
+                SEND
+            </button>
+
+        </form>
+
+        <p id="status" role="status" aria-live="polite"></p>
+
+    </main>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>
